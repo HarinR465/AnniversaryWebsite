@@ -5,7 +5,6 @@
 
 window.CONTENT = {
   herName: "Diya",
-  yourName: "Harin",
 
   // When you got together (your local time). Month is 1-12.
   anniversary: { year: 2025, month: 10, day: 26, hour: 17, minute: 0 },
@@ -18,7 +17,7 @@ window.CONTENT = {
       "Looks like I know you better than you do...",
       "Do I even know you?!",
     ],
-    correctMessages: ["Correct! 💕", "That's my girl! 🥰", "Yep, it's you! 😍"],
+    correctMessages: ["Correct!", "That's my girl!", "Yep, it's you!"],
     // Answers ignore capitals, spaces and punctuation.
     questions: [
       {
@@ -50,7 +49,7 @@ window.CONTENT = {
   },
 
   hero: {
-    eyebrow: "Harin ♡ Diya",
+    eyebrow: "Harin & Diya",
     title: "Happy Anniversary, my love",
   },
 
@@ -69,28 +68,24 @@ window.CONTENT = {
   // Milestones shown on the timeline. Swap the images for real photos.
   timeline: [
     {
-      emoji: "🥂",
       date: "Add the date",
       title: "Our first date",
       text: "Write a little memory about your first date here.",
       image: "images/placeholders/first-date.svg",
     },
     {
-      emoji: "✈️",
       date: "Add the date",
       title: "Our first trip together",
       text: "Where did you go? What was the best part?",
       image: "images/placeholders/first-trip.svg",
     },
     {
-      emoji: "🧳",
       date: "Add the date",
       title: "Our first solo trip together",
       text: "Just the two of you. Write about it here.",
       image: "images/placeholders/first-solo-trip.svg",
     },
     {
-      emoji: "🎶",
       date: "Add the date",
       title: "Our first festival together",
       text: "Which festival, and what was the highlight?",
@@ -114,17 +109,14 @@ window.CONTENT = {
 
   finalQuestion: {
     question: "Will you spend the rest of your life with me?",
-    yes: "Yes! 💖",
-    // The "No" button changes its text each time it runs away.
-    noTexts: [
-      "No",
-      "Are you sure?",
-      "Really sure?",
-      "Think again 🥺",
-      "Nice try 😏",
-      "Can't catch me!",
-      "Just press yes 💕",
+    yes: "Yes!",
+    no: "No",
+    // Shown each time she tries to press "No" (the last one repeats).
+    noMessages: [
+      "What do you mean???",
+      "Why did you do it again??",
+      "Did I waste my time making this website??",
     ],
-    afterYes: "Best answer ever! 🥰 Happy anniversary, Diya. I love you so much 💕",
+    afterYes: "Best answer ever! Happy anniversary, Diya. I love you so much.",
   },
 };

@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>For Diya 💕</title>
-  <meta name="description" content="A little something for Diya 💕">
-  <meta name="theme-color" content="#f7c6d0">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
+  <title>For Diya</title>
+  <meta name="description" content="A little something for Diya">
+  <meta name="theme-color" content="#ece4f7">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23c3aee0' d='M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,14 +19,14 @@
   <!-- Step 1: the "is it really you?" quiz -->
   <main class="quiz-screen" id="quiz">
     <div class="quiz-card" id="quiz-card">
-      <div class="quiz-emoji" aria-hidden="true">🔒💌</div>
+      <div class="quiz-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg></div>
       <p class="quiz-intro" id="quiz-intro"></p>
       <div class="progress" id="quiz-progress" aria-hidden="true"></div>
       <form class="quiz-form" id="quiz-form" autocomplete="off">
         <label class="quiz-question" id="quiz-question" for="quiz-answer"></label>
         <input class="quiz-input" id="quiz-answer" type="text" placeholder="Type your answer..."
                autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done">
-        <button class="btn btn-primary" type="submit">Submit 💕</button>
+        <button class="btn btn-primary" type="submit">Submit</button>
       </form>
       <p class="quiz-feedback" id="quiz-feedback" role="status" aria-live="polite"></p>
     </div>
@@ -34,7 +34,7 @@
 
   <!-- Step 2: celebration once every answer is right -->
   <div class="celebration" id="celebration" hidden>
-    <p class="celebration-text">It's really you! 💖</p>
+    <p class="celebration-text">It's really you!</p>
   </div>
 
   <!-- Step 3: the anniversary page -->
@@ -65,7 +65,7 @@
             <span class="envelope-paper"></span>
             <span class="envelope-front"></span>
             <span class="envelope-flap"></span>
-            <span class="envelope-seal">💌</span>
+            <span class="envelope-seal"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg></span>
           </button>
           <p class="hint">Tap to open</p>
         </div>
@@ -100,11 +100,10 @@
           <button class="btn btn-primary" id="yes-btn" type="button"></button>
           <button class="btn btn-ghost" id="no-btn" type="button"></button>
         </div>
+        <p class="final-message" id="final-message" role="status" aria-live="polite"></p>
         <p class="final-answer script" id="final-answer" hidden></p>
       </div>
     </section>
-
-    <footer class="footer" id="footer"></footer>
   </div>
 
   <script src="js/content.js"></script>

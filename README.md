@@ -1,4 +1,4 @@
-# Anniversary Website 💕
+# Anniversary Website
 
 A little anniversary website for Diya. It's plain HTML, CSS and JavaScript with no build step, so it can be hosted for free on GitHub Pages.
 

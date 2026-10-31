@@ -5,19 +5,20 @@
   const $ = (id) => document.getElementById(id);
   const pick = (list) => list[Math.floor(Math.random() * list.length)];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const PASTELS = ["#ffc8dd", "#bde0fe", "#cdb4db", "#c8ead9", "#ffd8be", "#fff1b8"];
+  const HEART_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg>';
 
   /* ---------- Floating hearts ---------- */
 
   const heartsLayer = $("floating-hearts");
-  const HEART_EMOJIS = ["💕", "💖", "💗", "💓", "🌸", "🤍"];
-
   function spawnHeart() {
     if (document.hidden || reduceMotion) return;
     const heart = document.createElement("span");
     heart.className = "floating-heart";
-    heart.textContent = pick(HEART_EMOJIS);
+    heart.innerHTML = HEART_SVG;
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = 14 + Math.random() * 22 + "px";
+    heart.style.width = 14 + Math.random() * 22 + "px";
+    heart.style.color = pick(PASTELS);
     heart.style.animationDuration = 7 + Math.random() * 6 + "s";
     heart.style.setProperty("--drift", (Math.random() - 0.5) * 140 + "px");
     heart.style.setProperty("--rot", (Math.random() - 0.5) * 80 + "deg");
@@ -36,7 +37,7 @@
   const Confetti = (function () {
     const canvas = $("confetti");
     const ctx = canvas.getContext("2d");
-    const COLOURS = ["#f78fb3", "#e8668a", "#fbcfd9", "#ffd166", "#c9a7eb", "#ffffff"];
+    const COLOURS = ["#f6a8c7", "#9fcaf2", "#b9a3dd", "#9fd8bf", "#ffc49b", "#ffe28a", "#ffffff"];
     let particles = [];
     let running = false;
 
@@ -199,7 +200,7 @@
     const answer = input.value.trim();
     if (!answer) {
       feedback.classList.remove("good");
-      feedback.textContent = "Type an answer first 🙈";
+      feedback.textContent = "Type an answer first";
       return;
     }
 
@@ -287,7 +288,7 @@
 
     $("hero-since").textContent = "since " + start.toLocaleDateString("en-GB", {
       day: "numeric", month: "long", year: "numeric",
-    }) + " 💕";
+    });
 
     function tick() {
       const total = Math.max(0, Math.floor((Date.now() - start) / 1000));
@@ -356,7 +357,7 @@
 
       const dot = document.createElement("span");
       dot.className = "timeline-dot";
-      dot.textContent = item.emoji;
+      dot.innerHTML = HEART_SVG;
 
       const card = document.createElement("div");
       card.className = "timeline-card";
@@ -397,6 +398,7 @@
     function render() {
       number.textContent = "#" + (index + 1);
       text.textContent = reasons[index];
+      card.style.setProperty("--card-colour", PASTELS[index % PASTELS.length]);
       count.textContent = (index + 1) + " of " + reasons.length + " · tap or swipe for the next one";
     }
 
@@ -474,12 +476,13 @@
     const section = $("final");
     const yesBtn = $("yes-btn");
     const noBtn = $("no-btn");
+    const message = $("final-message");
     let dodges = 0;
     let lastDodge = 0;
 
     $("final-question").textContent = F.question;
     yesBtn.textContent = F.yes;
-    noBtn.textContent = F.noTexts[0];
+    noBtn.textContent = F.no;
 
     function dodge(event) {
       if (event) event.preventDefault();
@@ -499,7 +502,8 @@
       }
 
       dodges++;
-      noBtn.textContent = F.noTexts[Math.min(dodges, F.noTexts.length - 1)];
+      message.textContent = F.noMessages[Math.min(dodges, F.noMessages.length) - 1];
+      restartAnimation(message, "pop-in");
       yesBtn.style.fontSize = Math.min(1 + dodges * 0.08, 1.6) + "rem";
 
       const pad = 12;
@@ -528,6 +532,7 @@
 
     yesBtn.addEventListener("click", () => {
       $("final-buttons").hidden = true;
+      message.hidden = true;
       noBtn.remove();
       const answer = $("final-answer");
       answer.textContent = F.afterYes;
@@ -543,8 +548,7 @@
   $("quiz-intro").textContent = C.quiz.intro;
   $("hero-eyebrow").textContent = C.hero.eyebrow;
   $("hero-title").textContent = C.hero.title;
-  $("footer").textContent = "Made with 💕 by " + C.yourName;
-  document.title = "For " + C.herName + " 💕";
+  document.title = "For " + C.herName;
 
   renderLetter();
   renderTimeline();
