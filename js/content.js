@@ -69,8 +69,8 @@ window.CONTENT = {
   timeline: [
     {
       date: "Add the date",
-      title: "Our first date",
-      text: "Write a little memory about your first date here.",
+      title: "My first picture of you",
+      text: "When my mom wanted to see you 🙂",
       image: "images/placeholders/first-date.svg",
     },
     {
