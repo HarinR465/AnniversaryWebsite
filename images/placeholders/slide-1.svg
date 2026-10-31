@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#bde0fe"/>
-      <stop offset="1" stop-color="#cdb4db"/>
+      <stop offset="0" stop-color="#ffc8dd"/>
+      <stop offset="1" stop-color="#f6a8c7"/>
     </linearGradient>
     <path id="h" d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/>
   </defs>
@@ -15,5 +15,5 @@
     <use href="#h" transform="translate(880 820) scale(2.5)"/>
   </g>
   <use href="#h" fill="#fff" opacity="0.9" transform="translate(752 390) scale(4)"/>
-  <text x="800" y="170" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#6b6385">Photo 1</text>
+  <text x="800" y="170" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#8a4a68">Photo 1</text>
 </svg>

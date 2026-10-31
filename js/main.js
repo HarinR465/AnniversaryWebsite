@@ -6,6 +6,7 @@
   const pick = (list) => list[Math.floor(Math.random() * list.length)];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const PASTELS = ["#ffc8dd", "#bde0fe", "#cdb4db", "#c8ead9", "#ffd8be", "#fff1b8"];
+  const HEART_COLOURS = ["#ffc8dd", "#f6a8c7", "#ffe3ee", "#ffc8dd", "#cdb4db", "#ffd8be"];
   const HEART_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg>';
 
   /* ---------- Floating hearts ---------- */
@@ -18,7 +19,7 @@
     heart.innerHTML = HEART_SVG;
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.width = 14 + Math.random() * 22 + "px";
-    heart.style.color = pick(PASTELS);
+    heart.style.color = pick(HEART_COLOURS);
     heart.style.animationDuration = 7 + Math.random() * 6 + "s";
     heart.style.setProperty("--drift", (Math.random() - 0.5) * 140 + "px");
     heart.style.setProperty("--rot", (Math.random() - 0.5) * 80 + "deg");
@@ -37,7 +38,7 @@
   const Confetti = (function () {
     const canvas = $("confetti");
     const ctx = canvas.getContext("2d");
-    const COLOURS = ["#f6a8c7", "#9fcaf2", "#b9a3dd", "#9fd8bf", "#ffc49b", "#ffe28a", "#ffffff"];
+    const COLOURS = ["#f6a8c7", "#ffc8dd", "#f48fb8", "#ffe3ee", "#b9a3dd", "#9fd8bf", "#ffc49b", "#ffffff"];
     let particles = [];
     let running = false;
 
