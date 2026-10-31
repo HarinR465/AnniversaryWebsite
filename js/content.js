@@ -116,6 +116,7 @@ window.CONTENT = {
       "What do you mean???",
       "Why did you do it again??",
       "Did I waste my time making this website??",
+      "Just say yes... 😞",
     ],
     afterYes: "Best answer ever! Happy anniversary, Diya. I love you so much.",
   },

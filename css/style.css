@@ -20,8 +20,8 @@
   --shadow: 0 12px 32px rgba(117, 99, 168, 0.16);
   --shadow-soft: 0 6px 20px rgba(117, 99, 168, 0.12);
   --radius: 24px;
-  --script: "Dancing Script", "Brush Script MT", cursive;
-  --sans: "Quicksand", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --script: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 *,
@@ -51,7 +51,8 @@ body {
 
 .script {
   font-family: var(--script);
-  font-weight: 700;
+  font-style: italic;
+  font-weight: 600;
 }
 
 /* ---------- Buttons ---------- */
@@ -197,8 +198,9 @@ body {
 .quiz-intro {
   margin: 0 0 20px;
   font-family: var(--script);
-  font-size: 1.7rem;
-  line-height: 1.25;
+  font-style: italic;
+  font-size: 1.9rem;
+  line-height: 1.2;
   color: var(--heading);
 }
 
@@ -299,8 +301,9 @@ body {
 .celebration-text {
   margin: 0;
   font-family: var(--script);
+  font-style: italic;
   font-size: clamp(2.8rem, 12vw, 5rem);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--heading);
   text-align: center;
   text-shadow: 0 4px 18px rgba(255, 255, 255, 0.9);
@@ -401,15 +404,11 @@ body {
 
 .counter-box {
   padding: 12px 4px;
-  background: var(--pink);
+  background: var(--mint);
   border-radius: 18px;
   box-shadow: var(--shadow);
   text-shadow: none;
 }
-
-.counter-box:nth-child(2) { background: var(--blue); }
-.counter-box:nth-child(3) { background: var(--mint); }
-.counter-box:nth-child(4) { background: var(--peach); }
 
 .counter-box span {
   display: block;
@@ -420,11 +419,11 @@ body {
 }
 
 .counter-box small {
-  font-size: 0.75rem;
+  font-size: clamp(0.58rem, 2.5vw, 0.75rem);
   font-weight: 600;
   color: var(--ink);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
 }
 
 .hero-since {
@@ -608,8 +607,9 @@ body {
 .letter-greeting,
 .letter-signature {
   font-family: var(--script);
-  font-size: 1.9rem;
-  font-weight: 700;
+  font-style: italic;
+  font-size: 2.1rem;
+  font-weight: 600;
   color: var(--heading);
   line-height: 1.2;
 }
@@ -713,8 +713,10 @@ body {
 .timeline-body h3 {
   margin: 2px 0 6px;
   font-family: var(--script);
-  font-size: 1.75rem;
-  line-height: 1.2;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.9rem;
+  line-height: 1.15;
   color: var(--ink);
 }
 
@@ -773,8 +775,9 @@ body {
 
 .reason-number {
   font-family: var(--script);
+  font-style: italic;
   font-size: 2.4rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--accent);
   line-height: 1;
 }

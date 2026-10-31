@@ -503,7 +503,6 @@
 
       dodges++;
       message.textContent = F.noMessages[Math.min(dodges, F.noMessages.length) - 1];
-      restartAnimation(message, "pop-in");
       yesBtn.style.fontSize = Math.min(1 + dodges * 0.08, 1.6) + "rem";
 
       const pad = 12;
@@ -511,6 +510,16 @@
       const maxY = Math.max(pad, section.clientHeight - noBtn.offsetHeight - pad);
       const currentX = parseFloat(noBtn.style.left) || 0;
       const currentY = parseFloat(noBtn.style.top) || 0;
+
+      // Never land on top of the "Yes" button or the message.
+      const area = section.getBoundingClientRect();
+      const keepClear = [yesBtn, message].map((el) => {
+        const r = el.getBoundingClientRect();
+        return { left: r.left - area.left - 16, top: r.top - area.top - 16, right: r.right - area.left + 16, bottom: r.bottom - area.top + 16 };
+      });
+      const covers = (x, y) => keepClear.some((r) =>
+        x < r.right && x + noBtn.offsetWidth > r.left && y < r.bottom && y + noBtn.offsetHeight > r.top);
+
       let x;
       let y;
       let tries = 0;
@@ -518,10 +527,12 @@
         x = pad + Math.random() * (maxX - pad);
         y = pad + Math.random() * (maxY - pad);
         tries++;
-      } while (Math.hypot(x - currentX, y - currentY) < 120 && tries < 20);
+      } while ((Math.hypot(x - currentX, y - currentY) < 120 || covers(x, y)) && tries < 60);
 
       noBtn.style.left = x + "px";
       noBtn.style.top = y + "px";
+      // Started after measuring, since the pop-in briefly shrinks the message.
+      restartAnimation(message, "pop-in");
     }
 
     noBtn.addEventListener("pointerenter", (e) => {
