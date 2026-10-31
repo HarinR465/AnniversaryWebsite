@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>For Diya 💕</title>
+  <meta name="theme-color" content="#f7c6d0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="floating-hearts" id="floating-hearts" aria-hidden="true"></div>
+  <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+
+  <!-- Step 1: the "is it really you?" quiz -->
+  <main class="quiz-screen" id="quiz">
+    <div class="quiz-card" id="quiz-card">
+      <div class="quiz-emoji" aria-hidden="true">🔒💌</div>
+      <p class="quiz-intro" id="quiz-intro"></p>
+      <div class="progress" id="quiz-progress" aria-hidden="true"></div>
+      <form class="quiz-form" id="quiz-form" autocomplete="off">
+        <label class="quiz-question" id="quiz-question" for="quiz-answer"></label>
+        <input class="quiz-input" id="quiz-answer" type="text" placeholder="Type your answer..."
+               autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done">
+        <button class="btn btn-primary" type="submit">Submit 💕</button>
+      </form>
+      <p class="quiz-feedback" id="quiz-feedback" role="status" aria-live="polite"></p>
+    </div>
+  </main>
+
+  <!-- Step 2: celebration once every answer is right -->
+  <div class="celebration" id="celebration" hidden>
+    <p class="celebration-text">It's really you! 💖</p>
+  </div>
+
+  <!-- Step 3: the anniversary page -->
+  <div class="site" id="site" hidden>
+    <div class="slideshow" id="slideshow" aria-hidden="true"></div>
+    <div class="slideshow-overlay" aria-hidden="true"></div>
+
+    <header class="hero">
+      <p class="hero-eyebrow" id="hero-eyebrow"></p>
+      <h1 class="script hero-title" id="hero-title"></h1>
+      <p class="hero-sub">We've been together for</p>
+      <div class="counter">
+        <div class="counter-box"><span id="c-days">0</span><small>days</small></div>
+        <div class="counter-box"><span id="c-hours">0</span><small>hours</small></div>
+        <div class="counter-box"><span id="c-minutes">0</span><small>minutes</small></div>
+        <div class="counter-box"><span id="c-seconds">0</span><small>seconds</small></div>
+      </div>
+      <p class="hero-since" id="hero-since"></p>
+      <p class="scroll-hint" aria-hidden="true">scroll down<br>↓</p>
+    </header>
+
+    <section class="section">
+      <div class="panel reveal">
+        <h2 class="script">A little letter for you</h2>
+        <div class="envelope-wrap" id="envelope-wrap">
+          <button class="envelope" id="envelope" type="button" aria-label="Open the letter">
+            <span class="envelope-back"></span>
+            <span class="envelope-paper"></span>
+            <span class="envelope-front"></span>
+            <span class="envelope-flap"></span>
+            <span class="envelope-seal">💌</span>
+          </button>
+          <p class="hint">Tap to open</p>
+        </div>
+        <article class="letter" id="letter" hidden></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="panel reveal">
+        <h2 class="script">Our firsts</h2>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="panel reveal">
+        <h2 class="script">Reasons I love you</h2>
+        <div class="deck">
+          <div class="reason-card" id="reason-card" role="button" tabindex="0" aria-label="Next reason">
+            <span class="reason-number" id="reason-number"></span>
+            <p class="reason-text" id="reason-text"></p>
+          </div>
+        </div>
+        <p class="hint" id="reason-count"></p>
+      </div>
+    </section>
+
+    <section class="section final" id="final">
+      <div class="panel final-panel reveal">
+        <h2 class="script" id="final-question"></h2>
+        <div class="final-buttons" id="final-buttons">
+          <button class="btn btn-primary" id="yes-btn" type="button"></button>
+          <button class="btn btn-ghost" id="no-btn" type="button"></button>
+        </div>
+        <p class="final-answer script" id="final-answer" hidden></p>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer"></footer>
+  </div>
+
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd3b6"/>
+      <stop offset="1" stop-color="#ff8b94"/>
+    </linearGradient>
+    <path id="h" d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <g fill="#fff" opacity="0.28">
+    <use href="#h" transform="translate(64 60) scale(4)"/>
+    <use href="#h" transform="translate(624 40) scale(6)"/>
+    <use href="#h" transform="translate(120 340) scale(7)"/>
+    <use href="#h" transform="translate(656 350) scale(3.5)"/>
+    <use href="#h" transform="translate(440 410) scale(2.5)"/>
+  </g>
+  <use href="#h" fill="#fff" opacity="0.9" transform="translate(352 140) scale(4)"/>
+  <text x="400" y="300" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#fff">First solo trip photo</text>
+</svg>
