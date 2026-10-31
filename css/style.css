@@ -338,11 +338,31 @@ body {
 .slide {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
   opacity: 0;
   transform: scale(1.08);
   transition: opacity 1.6s ease, transform 1.6s ease;
+}
+
+/* The whole photo is shown on top of a blurred copy that fills the screen,
+   so faces near the edges never get cropped off. */
+.slide::before,
+.slide::after {
+  content: "";
+  position: absolute;
+  background-image: var(--photo);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide::before {
+  inset: -48px;
+  background-size: cover;
+  filter: blur(26px) saturate(1.1);
+}
+
+.slide::after {
+  inset: 0;
+  background-size: contain;
 }
 
 .slide.active {

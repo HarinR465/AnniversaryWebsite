@@ -40,11 +40,9 @@ window.CONTENT = {
   slideshow: {
     secondsPerSlide: 5,
     images: [
-      "images/placeholders/slide-1.svg",
-      "images/placeholders/slide-2.svg",
-      "images/placeholders/slide-3.svg",
-      "images/placeholders/slide-4.svg",
-      "images/placeholders/slide-5.svg",
+      "images/background-1.jpg",
+      "images/background-2.jpg",
+      "images/background-3.jpg",
     ],
   },
 

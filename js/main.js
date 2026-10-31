@@ -263,7 +263,8 @@
     const slides = C.slideshow.images.map((src, i) => {
       const slide = document.createElement("div");
       slide.className = "slide" + (i === 0 ? " active" : "");
-      slide.style.backgroundImage = 'url("' + src + '")';
+      // Full URL, because a relative one would resolve against css/ when used in the stylesheet.
+      slide.style.setProperty("--photo", 'url("' + new URL(src, document.baseURI).href + '")');
       container.appendChild(slide);
       return slide;
     });
