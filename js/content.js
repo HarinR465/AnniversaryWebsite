@@ -51,15 +51,15 @@ window.CONTENT = {
     title: "Happy Anniversary, my love",
   },
 
-  // TEMPLATE: replace with your own words.
   letter: {
-    greeting: "My dearest Diya,",
+    greeting: "Happy Anniversary my love",
     paragraphs: [
-      "Happy anniversary! I can't believe it's already been a whole year since the day everything changed for the better.",
-      "Thank you for every laugh, every late-night conversation, every shopping trip I pretended to be tired on, and every frozen yoghurt we've shared. You make the ordinary days feel special and the special days feel unforgettable.",
-      "I'm so proud of us, and so excited for everything still to come. Here's to many, many more years together.",
+      "Thank you for everything you do for me my baby, I’ve never had someone care for me the way you do and I truly appreciate it. I couldn’t imagine my life without you because you bring so much happiness to my life. You bring joy to any room you’re in and you never fail to brighten my day. There are so many moments when I look at you and it’s still hard to believe that you’re my girlfriend.",
+      "You have no idea how much you mean to me and I’m so grateful to have you by my side when life gets tough.",
+      "This past year with you has been filled with so many great memories and I can’t wait to create a lifetime of memories with you.",
+      "I’m so proud of us, and so excited for everything still to come. Here’s to many, many more years together. I love you more than anything my baby, and I can’t wait to spend the rest of my life with you ❤️",
     ],
-    signOff: "All my love, forever,",
+    signOff: "Love you forever,",
     signature: "Harin",
   },
 
@@ -91,18 +91,16 @@ window.CONTENT = {
     },
   ],
 
-  // TEMPLATE: one reason per card. Add or remove as many as you like.
+  // One reason per card. Add or remove as many as you like.
   reasons: [
     "Your laugh can fix even my worst day.",
     "You always know how to make me smile.",
-    "You're my favourite shopping buddy (even when I'm carrying all the bags).",
-    "You share your frozen yoghurt with me... sometimes.",
-    "You make a KFC run feel like a date.",
-    "You're beautiful, inside and out.",
-    "You believe in me, even when I don't.",
+    "You believe in me, even when I don’t.",
     "Every adventure is better with you.",
-    "You're my best friend.",
-    "You're you, and that's my favourite thing of all.",
+    "You always know how to make me laugh.",
+    "You’re the most beautiful girl in the world.",
+    "Your smile can brighten up my whole day.",
+    "You take care of me through the tough times.",
   ],
 
   finalQuestion: {
