@@ -94,6 +94,7 @@ window.CONTENT = {
     {
       title: "Our first solo trip together 😏",
       text: "It wasn’t the most extravagant trip, but it was so nice spending time with you 😊",
+      image: "images/firsts/first-solo-trip.jpg",
     },
   ],
 
