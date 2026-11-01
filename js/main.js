@@ -364,23 +364,29 @@
       const card = document.createElement("div");
       card.className = "timeline-card";
 
-      const img = document.createElement("img");
-      img.src = item.image;
-      img.alt = item.title;
-      img.loading = "lazy";
+      if (item.image) {
+        const img = document.createElement("img");
+        img.src = item.image;
+        img.alt = item.title;
+        img.loading = "lazy";
+        card.appendChild(img);
+      }
 
       const body = document.createElement("div");
       body.className = "timeline-body";
-      const date = document.createElement("p");
-      date.className = "timeline-date";
-      date.textContent = item.date;
+      if (item.date) {
+        const date = document.createElement("p");
+        date.className = "timeline-date";
+        date.textContent = item.date;
+        body.appendChild(date);
+      }
       const title = document.createElement("h3");
       title.textContent = item.title;
       const text = document.createElement("p");
       text.textContent = item.text;
-      body.append(date, title, text);
+      body.append(title, text);
 
-      card.append(img, body);
+      card.appendChild(body);
       li.append(dot, card);
       list.appendChild(li);
     });

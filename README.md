@@ -18,11 +18,11 @@ A little anniversary website for Diya. It's plain HTML, CSS and JavaScript with 
 **All the text lives in `js/content.js`:** the letter, the reasons, the timeline, the quiz answers and the slideshow list. Edit that file and refresh.
 
 **Photos:**
-1. Put your photos in the `images/` folder, for example `images/beach.jpg`.
-2. In `js/content.js`, replace the `images/placeholders/...` paths with yours:
+1. Put your photos in the `images/` folder. The background photos are `images/background-*.jpg` and the timeline photos are in `images/firsts/`.
+2. List them in `js/content.js`:
    - `slideshow.images` for the background slideshow (add as many as you like)
-   - `image` on each `timeline` entry
-3. Keep each photo under about 500 KB (around 1600 px wide) so the site loads quickly on mobile data. You can delete `images/placeholders/` once every placeholder is replaced.
+   - `image` on each `timeline` entry (optional; leave it out and the card shows text only)
+3. Keep each photo under about 500 KB (around 1600 px on the longest side) so the site loads quickly on mobile data.
 
 **Skip the quiz while editing:** add `?preview` to the end of the address, for example `http://localhost:8000/?preview`.
 

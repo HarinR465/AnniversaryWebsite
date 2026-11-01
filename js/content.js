@@ -63,31 +63,37 @@ window.CONTENT = {
     signature: "Harin",
   },
 
-  // Milestones shown on the timeline. Swap the images for real photos.
+  // Milestones shown on the timeline. "date" and "image" are optional:
+  // leave either out and that part of the card is hidden.
   timeline: [
     {
-      date: "Add the date",
-      title: "My first picture of you",
-      text: "When my mom wanted to see you 🙂",
-      image: "images/placeholders/first-date.svg",
+      title: "My first birthday with you",
+      text: "When I took this picture, I knew you were my wife 😊",
+      image: "images/firsts/first-birthday.jpg",
     },
     {
-      date: "Add the date",
-      title: "Our first trip together",
-      text: "Where did you go? What was the best part?",
-      image: "images/placeholders/first-trip.svg",
-    },
-    {
-      date: "Add the date",
-      title: "Our first solo trip together",
-      text: "Just the two of you. Write about it here.",
-      image: "images/placeholders/first-solo-trip.svg",
-    },
-    {
-      date: "Add the date",
       title: "Our first festival together",
-      text: "Which festival, and what was the highlight?",
-      image: "images/placeholders/first-festival.svg",
+      text: "Very crazy night…",
+      image: "images/firsts/first-festival.jpg",
+    },
+    {
+      title: "Our first holiday together",
+      text: "A very unforgettable trip ❤️",
+      image: "images/firsts/first-holiday.jpg",
+    },
+    {
+      title: "The first day I told you I love you",
+      text: "A day I’ll never forget ❤️",
+      image: "images/background-3.jpg",
+    },
+    {
+      title: "Our first Valentine’s Day together",
+      text: "You looked so beautiful!",
+      image: "images/firsts/first-valentines.jpg",
+    },
+    {
+      title: "Our first solo trip together 😏",
+      text: "It wasn’t the most extravagant trip, but it was so nice spending time with you 😊",
     },
   ],
 

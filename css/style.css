@@ -706,8 +706,7 @@ body {
 .timeline-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  height: auto;
 }
 
 .timeline-body {
